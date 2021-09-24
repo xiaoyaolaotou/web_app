@@ -17,5 +17,5 @@ mysql:
   password: "12345678"
   dbname: "sql_demo"
   max_open_conns: 200
-  max_idle_conns: 50
+  max_idle_conns: 500
   

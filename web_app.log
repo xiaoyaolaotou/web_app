@@ -2,3 +2,33 @@
 {"level":"INFO","time":"2021-09-24T20:57:21.102+0800","caller":"logger/logger.go:70","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","errors":"","cost":0}
 {"level":"INFO","time":"2021-09-24T20:57:42.240+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-09-24T20:57:42.243+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T21:44:15.076+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2021-09-24T21:44:15.696+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2021-09-24T21:44:15.873+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2021-09-24T21:44:16.049+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2021-09-24T21:47:51.724+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T21:47:51.733+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T21:48:38.755+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T21:48:38.771+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T21:49:09.140+0800","caller":"settings/settings.go:58","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:49:09.143+0800","caller":"settings/settings.go:58","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:49:16.947+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T21:49:16.951+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T21:49:31.706+0800","caller":"settings/settings.go:58","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:49:31.707+0800","caller":"settings/settings.go:58","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:49:40.125+0800","caller":"settings/settings.go:58","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:49:40.127+0800","caller":"settings/settings.go:58","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:50:05.747+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T21:50:05.749+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T21:50:30.057+0800","caller":"settings/settings.go:60","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:50:30.060+0800","caller":"settings/settings.go:60","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T21:51:37.306+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T21:51:37.321+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T22:00:44.872+0800","caller":"settings/settings.go:60","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T22:00:44.875+0800","caller":"settings/settings.go:60","msg":"配置文件发生了修改"}
+{"level":"INFO","time":"2021-09-24T22:00:50.750+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T22:00:50.758+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T22:06:39.190+0800","caller":"web_app/main.go:64","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T22:06:39.200+0800","caller":"web_app/main.go:73","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-24T22:13:03.450+0800","caller":"web_app/main.go:68","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-24T22:13:03.450+0800","caller":"web_app/main.go:77","msg":"Server exiting"}

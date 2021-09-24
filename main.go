@@ -20,19 +20,23 @@ import (
 
 func main() {
 	// 1. 加载配置
-	if err := settings.Init(); err != nil {
+	if len(os.Args) < 2 {
+		fmt.Println("你的config file.eg: web_app config.yaml")
+		return
+	}
+	if err := settings.Init(os.Args[1]); err != nil {
 		fmt.Printf("init settings failed, err:%v\n", err)
 	}
 
 	// 2. 初始化日志
 
-	if err := logger.Init(); err != nil {
+	if err := logger.Init(settings.Conf.LogConfig); err != nil {
 		zap.L().Error("init logger failed", zap.Error(err))
 	}
 	defer zap.L().Sync() // 刷新缓存
 
 	// 3. 初始化MySQL
-	if err := mysql.InitDB(); err != nil {
+	if err := mysql.InitDB(settings.Conf.MySQLConfig); err != nil {
 		zap.L().Error("init mysql failed", zap.Error(err))
 	}
 	defer mysql.Close()
