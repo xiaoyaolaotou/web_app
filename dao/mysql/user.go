@@ -4,6 +4,7 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"errors"
+	"fmt"
 	"web_app/models"
 )
 
@@ -16,13 +17,15 @@ func CheckUserExist(username string) (err error) {
 	if count > 0 {
 		return errors.New("用户已存在")
 	}
+	fmt.Println(count)
 
-	return
+	return err
 }
 
 func InsertUser(user *models.User) (err error) {
 	// 对密码进行加密
 	password := encryptPassword(user.Password)
+	fmt.Sprintf("密码是什么:%+v", password)
 	// 执行SQL语句放库
 
 	sqlStr := `insert into user(user_id,username,password)values(?,?,?)`
