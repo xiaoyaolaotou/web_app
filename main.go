@@ -28,24 +28,33 @@ func main() {
 	}
 	if err := settings.Init(os.Args[1]); err != nil {
 		fmt.Printf("init settings failed, err:%v\n", err)
+		return
 	}
 
 	// 2. 初始化日志
 
 	if err := logger.Init(settings.Conf.LogConfig); err != nil {
 		zap.L().Error("init logger failed", zap.Error(err))
+		return
 	}
 	defer zap.L().Sync() // 刷新缓存
 
 	// 3. 初始化MySQL
 	if err := mysql.InitDB(settings.Conf.MySQLConfig); err != nil {
 		zap.L().Error("init mysql failed", zap.Error(err))
+		return
 	}
 	defer mysql.Close()
 
 	// 雪化算法， 唯一ID
-	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+	// if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+	// 	zap.L().Error("init snowflake failed", zap.Error(err))
+	// 	return
+	// }
+
+	if err := snowflake.Init(fmt.Sprintf("%s", viper.GetString("app.start_time")), 12); err != nil {
 		zap.L().Error("init snowflake failed", zap.Error(err))
+		return
 	}
 
 	// 初始化gin框架内置的翻译器

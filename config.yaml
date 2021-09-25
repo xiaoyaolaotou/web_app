@@ -2,8 +2,10 @@ app:
   name: "web_app"
   mode: "dev"
   port: 8081
-  start_time: "2021-09-24"
-  machine_id : 100
+  start_time: "2021-09-25"
+  machine_id : 1
+
+  
 log:
   level: "debug"
   filename: "web_app.log"

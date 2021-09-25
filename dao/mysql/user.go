@@ -9,9 +9,9 @@ import (
 )
 
 func CheckUserExist(username string) (err error) {
-	sqlStr := `select count(user_id) from user where username = ?`
+	sqlStr := `select count(username) from user where username = ?`
 	var count int
-	if err := db.Get(&count, sqlStr, username); err != nil {
+	if err := DB.Get(&count, sqlStr, username); err != nil {
 		return err
 	}
 	if count > 0 {
@@ -28,8 +28,8 @@ func InsertUser(user *models.User) (err error) {
 	fmt.Sprintf("密码是什么:%+v", password)
 	// 执行SQL语句放库
 
-	sqlStr := `insert into user(user_id,username,password)values(?,?,?)`
-	_, err = db.Exec(sqlStr, user.UserID, user.Username, password)
+	sqlStr := `insert into user(username,password)values(?,?)`
+	_, err = DB.Exec(sqlStr, user.Username, password)
 	return
 }
 

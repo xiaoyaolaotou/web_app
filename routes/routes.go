@@ -1,7 +1,6 @@
 package routes
 
 import (
-	"net/http"
 	"web_app/controllers"
 	"web_app/logger"
 
@@ -16,9 +15,9 @@ func Setup() *gin.Engine {
 	// 注册业务路由
 	r.POST("/signup", controllers.SignUpHandler)
 
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "ok")
-	})
+	r.GET("/", controllers.QueryBackupHandler)
+
+	r.POST("/v1/backup", controllers.BackupHandler)
 
 	return r
 }

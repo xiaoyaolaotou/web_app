@@ -13,3 +13,12 @@ CREATE TABLE `user` (
                         UNIQUE KEY `idx_username` (`username`) USING BTREE,
                         UNIQUE KEY `idx_user_id` (`user_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+                        `id` bigint(20) NOT NULL AUTO_INCREMENT,
+                        `username` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+                        `password` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+                        PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

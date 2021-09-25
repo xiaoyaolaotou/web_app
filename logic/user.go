@@ -25,10 +25,18 @@ func Singup(p *models.ParamSignUp) (err error) {
 	fmt.Println(userID)
 	// 构造一个User实例
 	user := &models.User{
-		UserID:   userID,
+		// UserID:   userID,
 		Username: p.Username,
 		Password: p.Password,
 	}
 	// 3. 保存进数据库
 	return mysql.InsertUser(user)
 }
+
+// func SingBackup(p *models.ParamBackup) (err error) {
+// 	if err := mysql.Exists(p.Username); err != nil {
+// 		fmt.Println("用户已存在", err)
+// 		return err
+// 	}
+
+// }

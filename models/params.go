@@ -6,3 +6,8 @@ type ParamSignUp struct {
 	Password   string `json:"password,omitempty" binding:"required"`
 	RePassword string `json:"re_password,omitempty" binding:"required,eqfield=Password"`
 }
+
+type ParamBackup struct {
+	Username string `json:"username,omitempty"`
+	Password string `json:"password,omitempty"`
+}
