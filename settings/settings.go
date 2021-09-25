@@ -16,6 +16,8 @@ type AppConfig struct {
 	Mode         string `mapstructure:"mode"`
 	Version      string `mapstructure:"version"`
 	Port         int    `mapstructure:"port"`
+	StartTime    string `mapstructure:"start_time"`
+	MachineID    int64  `mapstructure:"machine_id"`
 	*LogConfig   `mapstructure:"log"`
 	*MySQLConfig `mapstructure:"mysql"`
 }
@@ -32,7 +34,7 @@ type MySQLConfig struct {
 	Host         string `mapstructure:"host"`
 	User         string `mapstructure:"user"`
 	Password     string `mapstructure:"password"`
-	DBName       string `mapstructure:"db_name"`
+	DBName       string `mapstructure:"dbname"`
 	Port         int    `mapstructure:"port"`
 	MaxOpenConns int    `mapstructure:"max_open_conns"`
 	MaxIdleConns int    `mapstructure:"max_idle_conns"`

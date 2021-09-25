@@ -11,8 +11,10 @@ import (
 	"time"
 	"web_app/dao/mysql"
 	"web_app/logger"
+	"web_app/pkg/snowflake"
 	"web_app/routes"
 	"web_app/settings"
+	"web_app/utils"
 
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -40,6 +42,17 @@ func main() {
 		zap.L().Error("init mysql failed", zap.Error(err))
 	}
 	defer mysql.Close()
+
+	// 雪化算法， 唯一ID
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+		zap.L().Error("init snowflake failed", zap.Error(err))
+	}
+
+	// 初始化gin框架内置的翻译器
+	if err := utils.InitTrans("zh"); err != nil {
+		zap.L().Error("init Trans failed", zap.Error(err))
+		return
+	}
 
 	// 4. 注册路由
 	r := routes.Setup()
